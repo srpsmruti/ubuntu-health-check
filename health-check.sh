@@ -4,11 +4,11 @@
 THRESHOLD_CPU=80
 THRESHOLD_MEM=80
 THRESHOLD_DISK=80
-EMAIL="babu@testleaf.com"
+EMAIL="srp.smruti@gmail.com"
 BITNAMI_STATUS_SCRIPT="/opt/bitnami/ctlscript.sh"
 DB_HOSTNAME="127.0.0.1"
 DB_USERNAME="bn_opencart"
-DB_PASSWORD="fe390080a5573e5bbfb0ca29b926fa5529ea60020aec11c5979354f3c128f7b4"
+DB_PASSWORD="3ebdebdfa7be3af2baac1121bd58a5b3daf40b740ad47e433f2ae12516bb7c89"
 DB_DATABASE="bitnami_opencart"
 DB_PORT=3306
 

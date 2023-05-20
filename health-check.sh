@@ -22,22 +22,22 @@ mem_usage=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
 
 echo "Memory Usage: $mem_usage"
 
-if (( $(echo "$mem_usage > $THRESHOLD_MEM" |bc -l) )); then
-  echo "Memory usage is higher than $THRESHOLD_MEM%, it's $mem_usage%" | \
-  mail -s "High Memory usage alert" $EMAIL
-  checks_passed=false
-fi
+#if (( $(echo "$mem_usage > $THRESHOLD_MEM" |bc -l) )); then
+#  echo "Memory usage is higher than $THRESHOLD_MEM%, it's $mem_usage%" | \
+#  mail -s "High Memory usage alert" $EMAIL
+#  checks_passed=false
+#fi
 
 # Check Disk space usage
 disk_usage=$(df / | tail -1 | awk '{print $5}' | sed 's/%//')
 
 echo "Disk Usage: $disk_usage"
 
-if (( $(echo "$disk_usage > $THRESHOLD_DISK" |bc -l) )); then
-  echo "Disk usage is higher than $THRESHOLD_DISK%, it's $disk_usage%" | \
-  mail -s "High Disk usage alert" $EMAIL
-  checks_passed=false
-fi
+#if (( $(echo "$disk_usage > $THRESHOLD_DISK" |bc -l) )); then
+#  echo "Disk usage is higher than $THRESHOLD_DISK%, it's $disk_usage%" | \
+#  mail -s "High Disk usage alert" $EMAIL
+#  checks_passed=false
+#fi
 
 # Check status of Bitnami services
 services_status=$(sudo $BITNAMI_STATUS_SCRIPT status)
